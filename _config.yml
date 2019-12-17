@@ -1,0 +1,148 @@
+# Site settings
+title: DingYun's Blog
+SEOTitle: DingYun Blog | 李帅国的博客
+header-img: img/home-bg.jpg
+email: u5708190@gmail.com
+description: "Java,python,scala Coder and Big Data Engineer | 这里是 @DingYun ShuaiguoLi 的个人博客， 生活需要仪式感，💪。"
+keyword: "ShuaiguoLi,LiShuaiguo,DingYun,dingyun,定陨李帅国的博客,@DingYun,spider, @DingYun的博客, 博客, 个人网站, 互联网"
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://guthubdingyun.github.io/"              # your host, for absolute URL
+
+# Publish posts or collection documents with a future date.
+
+future: true
+# SNS settings
+RSS: true
+weibo_username:     定陨
+zhihu_username:     定陨
+github_username:    githubdingyun
+zhihu_username: dingyun
+linkedin_username:  定陨
+twitter_username:   定陨
+facebook_username:  定陨
+
+description_footer: 来自李帅国的个人专栏！
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+timezone: CN
+
+# Back to top 回到顶部by ray-eldath
+b2t: true
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+
+
+# Disqus settings
+# disqus_username: hux
+
+# Netease settings
+netease_comment: false
+
+gitalk:
+   enable: true
+   owner: githubdingyun
+   repo: githubdingyun.github.io
+   clientID: b67862f36106b7021235
+   clientSecret: d7cb495b8cf33ea44d3259936b13af1b06ad0902
+   admin: githubdingyun
+
+
+
+# Analytics settings
+# Baidu Analytics
+# ba_track_id: [your track id]
+
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: auto
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
+sidebar-avatar: /img/小埋0.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
+
+
+# Friends
+friends: [
+    {
+    #     title: "Su",
+    #     href: "http://su.gallery/"
+    # },{
+        title: "乱序",
+        href: "http://mida.re/"
+    },{
+        title: "Sherry Wu",
+        href: "https://xuechundesign.github.io"
+    },{
+        title: "Luke 的自留地",
+        href: "http://hmqk1995.github.io"
+    },{
+        title: "Ebn's Blog",
+        href: "http://ebnbin.com/"
+    },{
+        title: "SmdCn's Blog",
+        href: "http://blog.smdcn.net"
+    },{
+        title: "JiyinYiyong",
+        href: "http://tiye.me/"
+    },{
+        title: "David's Game",
+        href: "https://www.ruoyaowu.com/"
+    },{
+        title: "DHong Say",
+        href: "http://dhong.co"
+    },{
+        title: "尹峰以为",
+        href: "http://ingf.github.io/"
+    }
+]
