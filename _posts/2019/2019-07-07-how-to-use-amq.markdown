@@ -11,9 +11,6 @@ tags:
   - about
 ---
 
-
-> ᵃ ʷⁱˢᵉ ᵐᵃⁿ ⁿᵉᵛᵉʳ ᶠᵃˡˡ ⁱⁿ ˡᵒᵛᵉ
-
 ## 前言
 ​	具体场景是工作中机器上所有项目服务日志并不落地自己所在机器,而是发送到一台机器的amq上,通过重写log4j源代码,重新解析log4j.propertites文件把所有项目日志分目录,层次的打到各个文件目录下,并把异常日志通过项目配置人的方式发送到每个人的邮件和企业微信上.
 
@@ -22,10 +19,6 @@ tags:
 -------------------------------------------------------
 
 "ActiveMQ -> 生产者和消费者保证消息可靠性的常见使用"
-
-
-
-----------------------------------------------------------------
 
 ## 使用消息队列的优缺点分析
 ### 消息队列共有的优点:
@@ -179,10 +172,12 @@ public void sendMessage(ActiveMQMessage msg, final String msgid) throws JMSExcep
 }
 ```
 > 异步发送丢失消息的场景是：生产者设置UseAsyncSend=true，使用producer.send(msg)持续发送消息。由于消息不阻塞，
+>
 > 生产者会认为所有send的消息均被成功发送至MQ。如果服务端突然宕机，此时生产者端内存中尚未被发送至MQ的消息都会丢失。
 
-
 异步发送需要接收回执并由客户端再判断一次是否发送成功,一般通过回执消息来保证消息的可靠性.
+
+
 
 源码解读: 发送的线程通过回调函数告诉主线程是否发送成功,主线程根据收到的消息进行不同情形下的数据处理
 
@@ -256,7 +251,7 @@ public class LogConsumerWithAMQ implements MessageListener {
 2. 消费者同步消费,消息消费成功手动 msg.acknowledge() /消费者异步消费,消费成功再  msg.acknowledge()
 
 ## References
-[消息队列对比传统模式的优点](https://blog.csdn.net/wonderful_life_mrchi/article/details/84667426)
-[ActiveMQ异步发送使用及常见误区](https://www.jianshu.com/p/58e9deae6c4b)
-[activemq发送同步发送和异步发送](https://blog.csdn.net/YAOQINGGG/article/details/79833378)
-[jms的消息确认和事务](https://segmentfault.com/a/1190000015920000)
+1. [消息队列对比传统模式的优点](https://blog.csdn.net/wonderful_life_mrchi/article/details/84667426)
+2. [ActiveMQ异步发送使用及常见误区](https://www.jianshu.com/p/58e9deae6c4b)
+3. [activemq发送同步发送和异步发送](https://blog.csdn.net/YAOQINGGG/article/details/79833378)
+4. [jms的消息确认和事务](https://segmentfault.com/a/1190000015920000)

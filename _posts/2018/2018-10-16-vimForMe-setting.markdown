@@ -9,8 +9,8 @@ mathjax: true
 catalog: true
 author: "LSG"
 tags: 
-	-linux 
-	-vim
+  - linux 
+  - vim
 ---
 
 > vim 使用的简易配置,包括文字高亮,行号切换, 文件树浏览 以及 简单的自动补全

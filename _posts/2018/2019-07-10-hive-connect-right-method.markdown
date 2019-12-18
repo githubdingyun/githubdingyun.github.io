@@ -9,9 +9,9 @@ author: dingyun
 header-img: "img/lxy004.jpg"
 catalog: true
 tags: 
-	-hadoop 
-	-hive 
-	-nohup
+  - hadoop 
+  - hive 
+  - nohup
 ---
 > 自建集群hiveserver2需要后台启动,客户端操作hive比直接链接hive会更方便
 

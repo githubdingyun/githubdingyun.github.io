@@ -7,8 +7,8 @@ author:     "LSG"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
-	-java
-	-NIO
+  - java
+  - NIO
 ---
 
  “对语言设计人员来说，创建好的输入／输出系统是一项特别困难的任务。”

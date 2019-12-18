@@ -7,9 +7,9 @@ author:     "LSG"
 header-img: "img/post-bg-css.jpg"
 catalog: true
 tags:
-	-linux
-	-tmux
-	-oh my zsh
+  - linux
+  - tmux
+  - oh my zsh
 ---
 
 # 安装内容 ：按照次序~~(暂时不安装一些插件)
