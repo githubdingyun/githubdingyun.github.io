@@ -1,11 +1,10 @@
 ---
 layout: post
 title:  "链接hive数据库的正确方式"
-date:   2019-07-10 12:12:12
-categories: hive hadoop
-excerpt: 本文主要介绍了关于hive权限的配置文件,使用hive连接,使用hiveserver2后天启动,beeline和squi客户端链接hive
+date:   2018-07-10 12:12:12
+subtitle: 本文主要介绍了关于hive权限的配置文件,使用hive连接,使用hiveserver2后天启动,beeline和squi客户端链接hive
 mathjax: true
-author: dingyun
+author: "LSG"
 header-img: "img/lxy004.jpg"
 catalog: true
 tags: 

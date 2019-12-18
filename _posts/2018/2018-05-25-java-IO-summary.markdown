@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "一台自用linux的最初配置"
-subtitle:   "可以配置虚拟机上的linux,如果自己主力机是linux也能使用这些好工具"
+title:      "java io 总结"
+subtitle:   "同步io的使用和异步io的使用"
 date:       2018-05-25
 author:     "LSG"
 header-img: "img/post-bg-2015.jpg"
