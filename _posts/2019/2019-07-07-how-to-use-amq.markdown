@@ -7,8 +7,9 @@ author:     "LSG"
 header-img: "img/lxy003.jpg"
 catalog: true
 tags:
-  - sister
-  - about
+  - MQ
+  - java
+  - ActiveMQ
 ---
 
 ## 前言
@@ -185,14 +186,14 @@ public void sendMessage(ActiveMQMessage msg, final String msgid) throws JMSExcep
 
 ## 消费者:
 ### 同步阻塞接受:
-    * 性能: 慢    
+* 性能: 慢    
+
 但是维护容易,消息不易丢失,同时采用CLIENT_ACKNOWLEDGE来保证消息完好消费
 #### 代码示例:
 
-    ```java
-        Session session = aliyunAmqConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-        Queue workQueue = session.createQueue(queueName+"?consumer.prefetchSize=50");
-        MessageConsumer consumer = session.createConsumer(workQueue);
+    Session session = aliyunAmqConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+    Queue workQueue = session.createQueue(queueName+"?consumer.prefetchSize=50");
+    MessageConsumer consumer = session.createConsumer(workQueue);
         while(true){
             // 停止信号
             if(stopFlag == 1){
@@ -206,13 +207,14 @@ public void sendMessage(ActiveMQMessage msg, final String msgid) throws JMSExcep
                 }
             handle(message);
         }
-        
-    ```
+    
 
 ### 异步接收:
-        1.自动确认接受
-        2.手动确认接受
-    * 性能: 快
+1. 自动确认接受
+2. 手动确认接受
+
+* 性能: 快
+
 #### 代码示例:
 ```java
 public class LogConsumerWithAMQ implements MessageListener {
