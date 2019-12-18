@@ -60,7 +60,7 @@ tags:
 不设置异步同时持久化的情况下，send 方法都是同步的，并且一直阻塞直到ActiveMQ 
 发回确认消息：消息已经存储在持久性数据存储中,接受到 broker 的确认消息之前应用程序或线程会被阻塞。 PERSISTENT  (异步也能保证持久性)
 
-###同步发送代码示例:
+### 同步发送代码示例:
 
 ```java
 connection.createSession(Boolean.TRUE, Session.AUTO_ACKNOWLEDGE);
