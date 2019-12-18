@@ -34,23 +34,27 @@ tags:
 * 复杂性增加: 一致性,可靠性
 
 ## 基本设置:
-    队列:
-    同步队列:
-    多次消费:
-    如何保证有序性:
-    数据持久化:
-    属性结构:
-       connfactory->conn->session->producer/consumer
-    数据结构:
-        1. topic
-        2. queue
-    配置结构:
-        异步:
-        持久化: 生产者需要的关键字:  DeliveryMode.PERSISTENT   ->当
-        确认字:AUTO_ACKNOWLEDGE/CLIENT_ACKNOWLEDGE/DUPS_OK_ACKNOWLEDGE/SESSION_TRANSACTED ->当消息确认后队列才会把消息移出
-        消费者一次拉的数据量:consumer.prefetchSize=50
-        开启事务:
-    和jms规范进行对接:
+```markdown
+属性结构:
+   connfactory->conn->session->producer/consumer
+   
+配置结构:
+    异步:设置conn
+    持久化: 生产者需要的关键字:  DeliveryMode.PERSISTENT   ->当
+    确认字:AUTO_ACKNOWLEDGE/CLIENT_ACKNOWLEDGE/DUPS_OK_ACKNOWLEDGE/SESSION_TRANSACTED ->当消息确认后队列才会把消息移出
+    消费者一次拉的数据量:consumer.prefetchSize=50
+    开启事务: 
+     //Boolean.TRUE 表示开启事务
+            Session session = 
+            connection.createSession(Boolean.TRUE, Session.AUTO_ACKNOWLEDGE);
+            
+和jms规范进行对接:
+
+ public void sendMessageToAMQ(Destination destination, final String msg) {
+        jmsTemplate.send(destination, session -> session.createTextMessage(msg));
+    }
+     
+```
 
 
 ## 生产者:
@@ -191,23 +195,25 @@ public void sendMessage(ActiveMQMessage msg, final String msgid) throws JMSExcep
 但是维护容易,消息不易丢失,同时采用CLIENT_ACKNOWLEDGE来保证消息完好消费
 #### 代码示例:
 
-    Session session = aliyunAmqConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-    Queue workQueue = session.createQueue(queueName+"?consumer.prefetchSize=50");
-    MessageConsumer consumer = session.createConsumer(workQueue);
-        while(true){
-            // 停止信号
-            if(stopFlag == 1){
-                break;
-            }
-            message = consumer.receiveNoWait();
-            if (message == null) {
-                    //MQ中没有消息的时候,调用会直接返回,返回值为NULL,不能频繁一直调用,所以要睡眠1秒
-                    SystemUtils.sleep(1);
-                    continue;
-                }
-            handle(message);
+```java
+Session session = aliyunAmqConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+Queue workQueue = session.createQueue(queueName+"?consumer.prefetchSize=50");
+MessageConsumer consumer = session.createConsumer(workQueue);
+    while(true){
+        // 停止信号
+        if(stopFlag == 1){
+            break;
         }
-    
+        message = consumer.receiveNoWait();
+        if (message == null) {
+                //MQ中没有消息的时候,调用会直接返回,返回值为NULL,不能频繁一直调用,所以要睡眠1秒
+                SystemUtils.sleep(1);
+                continue;
+            }
+        handle(message);
+    }
+```
+
 
 ### 异步接收:
 1. 自动确认接受
