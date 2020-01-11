@@ -43,13 +43,13 @@ tags:
 
 ### 1.1 利用正则表达式中的查找替换在前面添加字符
 
-![img](../../img/in-post/regex001.png)
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/152121/1578740355491-ef290095-5f16-4e0c-a996-27a1201398a1.png)
 
 ### 1.2 爬虫验证网址:
 
 1. **[regex101](https://regex101.com/)**   通过该网站去写出正确**非灾难性回溯的 正则**
 
-   ![image-20200110115749496](C:\Users\DinGYun\AppData\Roaming\Typora\typora-user-images\image-20200110115749496.png)
+   **![image.png](https://cdn.nlark.com/yuque/0/2020/png/152121/1578740393034-efefbd7f-fccb-4eef-a9d3-b9bc8cb19928.png?x-oss-process=image/resize,w_1500)**
 
 2. **[json.cn](https://www.json.cn/)**  一个很棒的json解析
 
@@ -123,7 +123,7 @@ https://www.jianshu.com/p/458c246d79d4
 
 ### 5.1 获取xpath 或者 selector
 
-![image-20200110120009001](C:\Users\DinGYun\AppData\Roaming\Typora\typora-user-images\image-20200110120009001.png)
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/152121/1578740429162-a4386741-48d8-4406-9326-86ddc1e23f13.png)
 
 ### 5.2使用java/python工具类选择文档
 
