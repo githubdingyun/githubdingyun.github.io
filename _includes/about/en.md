@@ -21,6 +21,8 @@ Hi ! I'm  Shuaiuo Li, a big data / Java Development Engineer
 
 ----------------------------------------------------------------
 
+#### Personal introduction:
+
 * [pen name] Dingyun
 
 * [coordinate] Beijing
@@ -30,6 +32,8 @@ Hi ! I'm  Shuaiuo Li, a big data / Java Development Engineer
 * [hobbies]  bilibili, blog, ski
 
 * [Graduate School] graduated from ZZTI in 2019
+
+----------------------------------------------------------------
 
 #### Programming language tendency
 
