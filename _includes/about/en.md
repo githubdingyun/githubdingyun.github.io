@@ -31,14 +31,13 @@ Hi ! I'm  Shuaiuo Li, a big data / Java Development Engineer
 
 #### Programming language tendency
 
-* Java * * * * *
-
-* Scala * * *
-
-* Python * *
-
-* Shell * *
-
-* C *
-
-* PHP *
+| programming language | Rank      |
+| -------------------- | --------- |
+| Java                 | ★ ★ ★ ★ ★ |
+| Scala                | ★ ★ ★     |
+| Shell                | ★ ★       |
+| Python               | ★ ★       |
+| C                    | ★         |
+| PHP                  | ★         |
+| kotlin               | ★ ★       |
+| javascript           | ★ ★       |
