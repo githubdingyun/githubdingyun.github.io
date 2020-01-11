@@ -2,9 +2,24 @@
 
 Hi ! I'm  Shuaiuo Li, a big data / Java Development Engineer
 
-* Internship in 2019: Guangzhou Leying Information Technology Co., Ltd., traditional AVA web development
 
-* After graduation,  worked as a big data development engineer in Beijing palmtop Network Technology Co., Ltd
+* Senior practice at:
+
+* Guangzhou Leying Information Technology Co., Ltd.: traditional AVA Web Development Engineer
+
+* Back end, database design, tool class writing
+
+* After graduation:
+
+* Beijing ZSXJ : Big Data Development Engineer
+
+* Big data cluster operation and maintenance
+
+* Design and compilation of big data timing statistical task and data flow
+
+* Web crawler
+
+----------------------------------------------------------------
 
 * [pen name] Dingyun
 
