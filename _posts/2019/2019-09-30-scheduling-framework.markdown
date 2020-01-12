@@ -62,7 +62,6 @@ tags:
 #### 1.4 Linux/ooize 舍弃了秒的存在,从分钟开始
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/152121/1578464849952-627880c5-780f-4e87-83e7-d6071fd5c77e.png)
-
 <center>图1:Linux/ooize 舍弃了秒的存在<center>
 
 #### 1.5 Cron eg:
