@@ -112,9 +112,13 @@ epoll基于事件驱动，epoll_ctl注册事件并注册callback回调函数，e
 
 #### 查看所在hadoop集群机器上tcp情况
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/152121/1577963197369-d9364a6d-8408-405b-967f-f6ab58315308.png#align=left&display=inline&height=709&name=image.png&originHeight=709&originWidth=1056&size=555618&status=done&style=none&width=1056)
-#### 查看所在hadoop集群机器上所开的本地监听server![image.png](https://cdn.nlark.com/yuque/0/2020/png/152121/1577963204321-7ef57b2c-bd6f-4689-92b8-4be586e0bd52.png#align=left&display=inline&height=754&name=image.png&originHeight=754&originWidth=1209&size=597121&status=done&style=none&width=1209)
+#### 查看所在hadoop集群机器上所开的本地监听server
 
-## netty中的 boss和worker /   LISTEN 和 ESTABLISHED
+#### ![image.png](https://cdn.nlark.com/yuque/0/2020/png/152121/1577963204321-7ef57b2c-bd6f-4689-92b8-4be586e0bd52.png#align=left&display=inline&height=754&name=image.png&originHeight=754&originWidth=1209&size=597121&status=done&style=none&width=1209)
+
+
+
+**netty中的 boss和worker   ---对应--->   LISTEN 和 ESTABLISHED**
 
 ## reference
 
