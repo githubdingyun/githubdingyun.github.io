@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "常见java web开发是如何使用多线程和解决数据冲入问题的"
+title:  java web 开发中的多线程
+subtitle: 常见java web开发是如何使用多线程和解决数据冲入问题的
 date:   2019-08-01
 mathjax: true
 author: "LSG"
