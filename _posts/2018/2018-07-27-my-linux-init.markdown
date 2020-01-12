@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "一台自用linux的最初配置"
-subtitle:   "可以配置虚拟机上的linux,如果自己主力机是linux也能使用这些好工具"
+title:      "我的linux安装了什么工具?"
+subtitle:   "好用的linux上肯定必备一些有趣的工具,这些是我的linux主力机使用的工具"
 date:       2018-07-27
 author:     "LSG"
 header-img: "img/post-bg-css.jpg"

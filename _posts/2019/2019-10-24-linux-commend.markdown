@@ -7,7 +7,7 @@ author:     "LSG"
 header-img: "img/post-bg-os-metro.jpg"
 catalog: true
 tags:
-  - Linux
+  - linux
   - OS
 ---
 

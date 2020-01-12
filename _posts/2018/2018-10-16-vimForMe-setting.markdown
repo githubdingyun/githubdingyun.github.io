@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "my vim!"
-date:   2018-10-16 15:14:54
+date:   2018-10-16
 categories: vim
 excerpt: 如何配置自己的vim以及保存自己的配置文件(配色,插件,快捷键,常见设置)
 header-img: "img/lxy006.jpg"
