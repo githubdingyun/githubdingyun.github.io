@@ -64,6 +64,7 @@ tags:
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/152121/1578464849952-627880c5-780f-4e87-83e7-d6071fd5c77e.png)
 <center>图1:Linux/ooize 舍弃了秒的存在</center>
 
+
 #### 1.5 Cron eg:
 
 - 0 0 12 ? * WED（每星期三下午12:00 执行）
