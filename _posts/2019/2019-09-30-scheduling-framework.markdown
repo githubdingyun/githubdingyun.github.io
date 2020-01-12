@@ -50,21 +50,20 @@ tags:
 
 #### 1.3 Cron中的符号:
 
-***** ：代表整个时间段.
-**/** ：表示每多长时间执行一次
-**0/15 **: `表示每隔15分钟执行一次,“0”表示为从“0”分开始；`
-**3/20 **: `表示每隔20分钟执行一次，“3”表示从第3分钟开始执行`
-**?** ：表示每月的某一天，或第几周的某一天
-**L** ：
-`“6L”表示“每月的最后一个星期五”`
-**W**：`如“15W”放在每月（day-of-month）字段上表示为“到本月15日最近的工作日”`
-**#**：
-`"6#3"或者"FRI#3":在每周（day-of-week）中表示“每月第三个星期五”`
+* ***** ：`代表整个时间段.`
+* **/** ：`表示每多长时间执行一次`
+* **0/15 **: `表示每隔15分钟执行一次,“0”表示为从“0”分开始；`
+* **3/20 **: `表示每隔20分钟执行一次，“3”表示从第3分钟开始执行`
+* **?** ：`表示每月的某一天，或第几周的某一天`
+* **L** ：`“6L”表示“每月的最后一个星期五”`
+* **W**：`如“15W”放在每月（day-of-month）字段上表示为“到本月15日最近的工作日”`
+* **#**：`"6#3"或者"FRI#3":在每周（day-of-week）中表示“每月第三个星期五”`
 
 #### 1.4 Linux/ooize 舍弃了秒的存在,从分钟开始
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/152121/1578464849952-627880c5-780f-4e87-83e7-d6071fd5c77e.png#align=left&display=inline&height=263&name=image.png&originHeight=526&originWidth=658&size=53323&status=done&style=none&width=329)
-图1:Linux/ooize 舍弃了秒的存在
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/152121/1578464849952-627880c5-780f-4e87-83e7-d6071fd5c77e.png)
+
+<center>图1:Linux/ooize 舍弃了秒的存在<center>
 
 #### 1.5 Cron eg:
 
@@ -187,7 +186,7 @@ tags:
 
 1. Boss线程去轮询待执行任务比较判断时间并run task
 1. 如果线程为空,防止while(true) 不停转,就把该线程wait了 : queue.wait(executionTime - currentTime);
-1. 等待超时时间过后，执行task的run方法 
+1. 等待超时时间过后，执行task的run方法 
 1. wait够了就: task.run();
 
 ```java
@@ -241,7 +240,7 @@ tags:
 
 ### 2.3 多线程任务调度器
 
-### 2.3.1 ScheduledExecutorService 
+### 2.3.1 ScheduledExecutorService 
 
 #### 优点:
 
@@ -250,24 +249,24 @@ tags:
 #### 简单使用:
 
 ```java
- Runnable runnable = new Runnable() {  
-            public void run() {  
-                // task to run goes here  
-                System.out.println("Hello !!");  
-            }  
-        };  
-        ScheduledExecutorService service = Executors  
-                .newSingleThreadScheduledExecutor();  
-        // 第二个参数为首次执行的延时时间，第三个参数为定时执行的间隔时间  
-        service.scheduleAtFixedRate(runnable, 10, 1, TimeUnit.SECONDS);  
-//        创建并执行在给定延迟后启用的 ScheduledFuture。
-//        参数：
-//        callable - 要执行的功能
-//        delay - 从现在开始延迟执行的时间
-//        unit - 延迟参数的时间单位
-//        返回：
-//        可用于提取结果或取消的 ScheduledFuture
-service.schedule(runnable, delay, TimeUnit.MILLISECONDS); 
+ Runnable runnable = new Runnable() {  
+            public void run() {  
+                // task to run goes here  
+                System.out.println("Hello !!");  
+            }  
+        };  
+        ScheduledExecutorService service = Executors  
+                .newSingleThreadScheduledExecutor();  
+        // 第二个参数为首次执行的延时时间，第三个参数为定时执行的间隔时间  
+        service.scheduleAtFixedRate(runnable, 10, 1, TimeUnit.SECONDS);  
+//        创建并执行在给定延迟后启用的 ScheduledFuture。
+//        参数：
+//        callable - 要执行的功能
+//        delay - 从现在开始延迟执行的时间
+//        unit - 延迟参数的时间单位
+//        返回：
+//        可用于提取结果或取消的 ScheduledFuture
+service.schedule(runnable, delay, TimeUnit.MILLISECONDS); 
 ```
 
 ### 2.3.1三种方法:
@@ -335,7 +334,7 @@ public static void main(String[] args) throws SchedulerException, InterruptedExc
 
 ## 3. 集群调度任务ooize
 
-详情见我的:   [**ooize使用到精通**](https://githubdingyun.github.io/2019/10/24/how-to-use-ooize/)
+详情见我的:   [**ooize使用到精通**](https://githubdingyun.github.io/2019/10/24/how-to-use-ooize/)
 
 ## Refrence
 
