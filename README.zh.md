@@ -10,4 +10,12 @@
 2. 感谢 Jekyll、Github Pages 和 Bootstrap!
 
 
+### 解决外部链接图片403问题
+
+在head.html中添加:
+
+```html
+<meta name="referrer" content="no-referrer"/>
+```
+
 
