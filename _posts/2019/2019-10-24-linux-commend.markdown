@@ -23,7 +23,13 @@ linux 运维监控包括很多维度: 磁盘,io,网络,负载,端口监控,日�
 ## 磁盘监控
  * ```df -lh```
  * ```du -sh /data/*```
+## 删除线上日志
+
+* true > INFO-
+* true > ERROR-
+
 ## cpu监控
+
 * ```top```
 * ```htop```
 ## 进程监控
@@ -251,3 +257,40 @@ else
 fi
 
 ```
+
+## 日志批量删除脚本(微服务为例)
+
+```sh
+#!/bin/bash
+find /data/bin/micro_service/log/GateWay/**/  -mtime +1 -name "*.log" -exec echo {} > /logname.txt \;
+find /data/bin/micro_service/log/EurekaServer/**/  -mtime +1 -name "*.log" -exec echo {} > /logname.txt \;
+find /data/bin/micro_service/log/BranchGetWay/**/  -mtime +1 -name "*.log" -exec echo {} > /logname.txt \;
+find /data/bin/micro_service/service/   -name "branchgetway.log" -exec echo {} >> /logname.txt \;
+find /data/bin/micro_service/service/  -name "eurekaserver.log" -exec echo {} >> /logname.txt \;
+find /data/bin/micro_service/service/  -name "gateway.log" -exec echo {} >> /logname.txt \;
+find /data/bin/micro_service/service/  -name "securityserver.log" -exec echo {} >> /logname.txt \;
+find /data/bin/micro_service/service/  -name "nohup.out" -exec echo {} >> /logname.txt \;
+
+for logfile in `cat /logname.txt`
+do
+ echo $logfile
+ true > $logfile
+done
+```
+
+## 脚本开机启动
+
+### 　　方法1.使用 /etc/rc.d/rc.local，自动启动脚本
+
+```sh
+# 例子
+touch /var/lock/subsys/local  
+```
+
+1.  授予 /etc/rc.d/rc.local 文件执行权限
+    命令：chmod +x /etc/rc.d/rc.local
+2.  在文件文件底部添加脚本
+3.  重启服务器，查看脚本是否启动
+  注意：/etc/rc.d/rc.local脚本执行，在/etc/profile之前，若/etc/rc.d/rc.local用到/etc/profile的环境变量，Shell无法执行成功
+
+### 方法2.注册服务
