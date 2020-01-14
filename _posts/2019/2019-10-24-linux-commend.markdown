@@ -277,6 +277,44 @@ do
  true > $logfile
 done
 ```
+## 当文件大小大于85%时,删除日志,写入定时任务中,3h检测一次
+
+```sh
+#!/usr/bin/env bash
+#usage:clean disk
+#time:2020-01-13
+limit=85
+function is_overusage(){
+ usedrate=$(df -hl | grep /data | awk '{print $5}'|awk -F "%" '{print $1}')
+ echo $usedrate
+ if [ $usedrate -gt $limit ]
+    then 
+       return 1
+    else 
+       return 0
+ fi
+}
+function clean_logs(){
+  find /data/log/**/INFO/  -mtime +12 -name "*.log" -exec echo {} > /data/log/logname.txt \;
+  find /data/log/**/WARN/  -mtime +12 -name "*.log" -exec echo {} >> /data/log/logname.txt \;
+  find /data/log/**/**/{INFO,WARN}  -mtime +12 -name "*.log" -exec echo {} >> /data/log/logname.txt \;
+  sed -i '/ReportPlatform/d' /data/log/logname.txt
+  find /data/log/ReportPlatform/ReportPlatform-172.16.6.122/INFO/ -mtime +60 -name "*.log" -exec echo {} >> /data/log/logname.txt \;
+  for logfile in `cat /data/log/logname.txt`
+  do
+   # echo $logfile
+    true > $logfile
+  done
+}
+is_overusage
+if [ $? -eq 1 ]
+ then 
+   clean_logs
+  # echo "over"
+fi
+```
+
+
 
 ## 脚本开机启动
 
