@@ -2,7 +2,7 @@
 layout:     post
 title:      "HOW TO USE OOIZE"
 subtitle:   "大数据调度框架 ooize 的基本使用以及图解"
-date:       2010-08-25
+date:       2019-08-25
 author:     "LSG"
 header-img: "img/ooize.png"
 catalog: true
