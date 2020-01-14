@@ -1,4 +1,18 @@
-# 数据仓库hive
+---
+layout:     post
+title:      "数据仓库hive的使用总结 "
+subtitle:   "信息、载体、抽象、线程 设计乱谈"
+date:       2019-09-30
+author:     "LSG"
+header-img: "img/post-bg-infinity.jpg"
+catalog: true
+tags:
+  - hadoop
+  - hive
+  - SQL
+---
+
+> hive的常见用法
 
 ### 1.1模型
 

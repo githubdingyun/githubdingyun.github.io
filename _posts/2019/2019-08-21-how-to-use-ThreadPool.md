@@ -1,11 +1,23 @@
-# 正确的使用java线程池
+---
+layout:     post
+title:      "如何正确的使用java线程池 "
+subtitle:   "信息、载体、抽象、线程 设计乱谈"
+date:       2019-08-21
+author:     "LSG"
+header-img: "img/post-bg-miui6.jpg"
+catalog: true
+tags:
+  - Thread
+  - Pool
+  - java
+---
 
 ### 1.为什么使用线程池:
 - 复用已有资源
 - 控制资源总量
 
 ### 2.java自带的四种线程池工厂
-#### 2.1Java通过Executors提供四种线程池，分别为：
+#### 2.1 Java通过Executors提供四种线程池，分别为：
 
 1. newCachedThreadPool创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
 1. newFixedThreadPool 创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。
