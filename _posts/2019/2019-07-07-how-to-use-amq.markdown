@@ -263,3 +263,5 @@ public class LogConsumerWithAMQ implements MessageListener {
 2. [ActiveMQ异步发送使用及常见误区](https://www.jianshu.com/p/58e9deae6c4b)
 3. [activemq发送同步发送和异步发送](https://blog.csdn.net/YAOQINGGG/article/details/79833378)
 4. [jms的消息确认和事务](https://segmentfault.com/a/1190000015920000)
+5. [生产环境消息队列ActiveMQ的数据积压优化过程 ](https://my.oschina.net/feinik/blog/1674168)
+

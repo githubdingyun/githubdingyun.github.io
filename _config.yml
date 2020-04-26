@@ -14,12 +14,12 @@ future: true
 # SNS settings
 RSS: true
 weibo_username:     定陨
-zhihu_username:     定陨
+zhihu_username:     dingyun
 github_username:    githubdingyun
 zhihu_username: dingyun
 linkedin_username:  定陨
 twitter_username:   定陨
-facebook_username:  定陨
+facebook_username:  dingyun
 
 description_footer: 来自李帅国的个人专栏！
 

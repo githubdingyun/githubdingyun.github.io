@@ -7,7 +7,7 @@ author:     "LSG"
 header-img: "img/post-bg-os-metro.jpg"
 catalog: true
 tags:
-  - Linux
+  - linux
   - OS
 ---
 
@@ -23,7 +23,13 @@ linux 运维监控包括很多维度: 磁盘,io,网络,负载,端口监控,日�
 ## 磁盘监控
  * ```df -lh```
  * ```du -sh /data/*```
+## 删除线上日志
+
+* true > INFO-
+* true > ERROR-
+
 ## cpu监控
+
 * ```top```
 * ```htop```
 ## 进程监控
@@ -251,3 +257,78 @@ else
 fi
 
 ```
+
+## 日志批量删除脚本(微服务为例)
+
+```sh
+#!/bin/bash
+find /data/bin/micro_service/log/GateWay/**/  -mtime +1 -name "*.log" -exec echo {} > /logname.txt \;
+find /data/bin/micro_service/log/EurekaServer/**/  -mtime +1 -name "*.log" -exec echo {} > /logname.txt \;
+find /data/bin/micro_service/log/BranchGetWay/**/  -mtime +1 -name "*.log" -exec echo {} > /logname.txt \;
+find /data/bin/micro_service/service/   -name "branchgetway.log" -exec echo {} >> /logname.txt \;
+find /data/bin/micro_service/service/  -name "eurekaserver.log" -exec echo {} >> /logname.txt \;
+find /data/bin/micro_service/service/  -name "gateway.log" -exec echo {} >> /logname.txt \;
+find /data/bin/micro_service/service/  -name "securityserver.log" -exec echo {} >> /logname.txt \;
+find /data/bin/micro_service/service/  -name "nohup.out" -exec echo {} >> /logname.txt \;
+
+for logfile in `cat /logname.txt`
+do
+ echo $logfile
+ true > $logfile
+done
+```
+## 当文件大小大于85%时,删除日志,写入定时任务中,3h检测一次
+
+```sh
+#!/usr/bin/env bash
+#usage:clean disk
+#time:2020-01-13
+limit=85
+function is_overusage(){
+ usedrate=$(df -hl | grep /data | awk '{print $5}'|awk -F "%" '{print $1}')
+ echo $usedrate
+ if [ $usedrate -gt $limit ]
+    then 
+       return 1
+    else 
+       return 0
+ fi
+}
+function clean_logs(){
+  find /data/log/**/INFO/  -mtime +12 -name "*.log" -exec echo {} > /data/log/logname.txt \;
+  find /data/log/**/WARN/  -mtime +12 -name "*.log" -exec echo {} >> /data/log/logname.txt \;
+  find /data/log/**/**/{INFO,WARN}  -mtime +12 -name "*.log" -exec echo {} >> /data/log/logname.txt \;
+  sed -i '/ReportPlatform/d' /data/log/logname.txt
+  find /data/log/ReportPlatform/ReportPlatform-172.16.6.122/INFO/ -mtime +60 -name "*.log" -exec echo {} >> /data/log/logname.txt \;
+  for logfile in `cat /data/log/logname.txt`
+  do
+   # echo $logfile
+    true > $logfile
+  done
+}
+is_overusage
+if [ $? -eq 1 ]
+ then 
+   clean_logs
+  # echo "over"
+fi
+```
+
+
+
+## 脚本开机启动
+
+### 　　方法1.使用 /etc/rc.d/rc.local，自动启动脚本
+
+```sh
+# 例子
+touch /var/lock/subsys/local  
+```
+
+1.  授予 /etc/rc.d/rc.local 文件执行权限
+    命令：chmod +x /etc/rc.d/rc.local
+2.  在文件文件底部添加脚本
+3.  重启服务器，查看脚本是否启动
+  注意：/etc/rc.d/rc.local脚本执行，在/etc/profile之前，若/etc/rc.d/rc.local用到/etc/profile的环境变量，Shell无法执行成功
+
+### 方法2.注册服务
