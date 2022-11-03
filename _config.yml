@@ -1,10 +1,10 @@
 # Site settings
 title: DingYun's Blog
-SEOTitle: DingYun Blog | 李帅国的博客
+SEOTitle: DingYun Blog | 定陨 的博客
 header-img: img/home-bg.jpg
 email: u5708190@gmail.com
 description: "Java,python,scala Coder and Big Data Engineer | 这里是 @DingYun ShuaiguoLi 的个人博客， 生活需要仪式感，💪。"
-keyword: "ShuaiguoLi,LiShuaiguo,DingYun,dingyun,定陨李帅国的博客,@DingYun,spider, @DingYun的博客, 博客, 个人网站, 互联网"
+keyword: "ShuaiguoLi,LiShuaiguo,DingYun,dingyun,定陨的博客,@DingYun,spider, @DingYun的博客, 博客, 个人网站, 互联网"
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 url: "https://guthubdingyun.github.io/"              # your host, for absolute URL
 
@@ -21,7 +21,7 @@ linkedin_username:  定陨
 twitter_username:   定陨
 facebook_username:  dingyun
 
-description_footer: 来自李帅国的个人专栏！
+description_footer: 来自定陨的个人专栏！
 
 
 
