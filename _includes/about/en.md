@@ -1,6 +1,6 @@
 > Before leaving the world, everything is a process.
 
-Hi ! I'm  Shuaiuo Li, a big data / Java Development Engineer
+Hi ! I'm  DingYun, a big data / Java Development Engineer
 
 
 * Senior practice at:
@@ -19,13 +19,12 @@ Hi ! I'm  Shuaiuo Li, a big data / Java Development Engineer
 
 * [pen name] Dingyun
 
-* [coordinate] Beijing
+* [coordinate] ZheJiang HangZhou
 
 * [occupation] big data development
 
 * [hobbies]  bilibili, blog, ski
 
-* [Graduate School] graduated from ZZTI in 2019
 
 ----------------------------------------------------------------
 
