@@ -23,7 +23,8 @@ Hi ! I'm  DingYun, a big data / Java Development Engineer
 
 * [occupation] big data development
 
-* [hobbies]  bilibili, blog, ski, drew big Pie 
+* [hobbies]  blog, ski, basketball, badminton, Brain burning film and television works
+
 
 
 ----------------------------------------------------------------
