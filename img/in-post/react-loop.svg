@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="ari" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6366f1"/>
+    </marker>
+    <marker id="ard" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="520" fill="#ffffff"/>
+
+  <rect x="20" y="40" width="920" height="430" rx="16" fill="#f8f9ff" stroke="#e2e4f8"/>
+  <text x="44" y="72" font-size="15" font-weight="700" fill="#4f46e5">ReAct 循环 · 思考与行动交替进行</text>
+
+  <!-- Final Answer 出口 -->
+  <rect x="630" y="88" width="280" height="66" rx="33" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="770" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#3730a3">Final Answer 最终答案</text>
+  <text x="770" y="138" text-anchor="middle" font-size="11" fill="#6366f1">模型判断已完成，跳出循环</text>
+
+  <!-- ① Thought -->
+  <rect x="50" y="200" width="250" height="130" rx="12" fill="#ffffff" stroke="#8b8bf0"/>
+  <text x="175" y="240" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">① Thought</text>
+  <text x="175" y="266" text-anchor="middle" font-size="12.5" fill="#64748b">思考：我下一步该做什么？</text>
+  <text x="175" y="290" text-anchor="middle" font-size="12.5" fill="#64748b">（推理当前状态与目标）</text>
+
+  <!-- ② Action -->
+  <rect x="355" y="200" width="250" height="130" rx="12" fill="#ffffff" stroke="#8b8bf0"/>
+  <text x="480" y="240" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">② Action</text>
+  <text x="480" y="266" text-anchor="middle" font-size="12.5" fill="#64748b">行动：调用某个工具</text>
+  <text x="480" y="290" text-anchor="middle" font-size="12.5" fill="#64748b">（或直接给出回答）</text>
+
+  <!-- ③ Observation -->
+  <rect x="660" y="200" width="250" height="130" rx="12" fill="#ffffff" stroke="#8b8bf0"/>
+  <text x="785" y="240" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">③ Observation</text>
+  <text x="785" y="266" text-anchor="middle" font-size="12.5" fill="#64748b">观察：工具返回了什么？</text>
+  <text x="785" y="290" text-anchor="middle" font-size="12.5" fill="#64748b">（结果加入上下文）</text>
+
+  <line x1="300" y1="265" x2="351" y2="265" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="605" y1="265" x2="656" y2="265" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 回到 Thought -->
+  <path d="M785 330 L785 405 L175 405 L175 334" fill="none" stroke="#6366f1" stroke-width="2" marker-end="url(#ari)"/>
+  <text x="480" y="393" text-anchor="middle" font-size="12" fill="#4f46e5">带着新的观察回到 Thought，开始下一轮</text>
+
+  <!-- 跳出循环 -->
+  <path d="M175 200 L175 121 L626 121" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#ard)"/>
+  <text x="400" y="112" text-anchor="middle" font-size="11.5" fill="#b45309">④ 当模型判断任务已完成时 → 跳出循环</text>
+
+  <text x="44" y="452" font-size="12.5" fill="#475569">三拍循环：想 → 做 → 看，直到模型自己认为可以收工。循环次数由模型决定，而非代码写死。</text>
+</svg>

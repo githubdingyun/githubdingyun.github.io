@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="ard" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="520" fill="#ffffff"/>
+
+  <!-- ===== ① 离线索引 ===== -->
+  <rect x="20" y="60" width="920" height="150" rx="14" fill="#f5f8ff" stroke="#dbe6ff"/>
+  <text x="42" y="92" font-size="15" font-weight="700" fill="#2563eb">① 离线 · 索引 Indexing</text>
+
+  <g>
+    <rect x="50" y="116" width="170" height="68" rx="10" fill="#ffffff" stroke="#7ea6f5"/>
+    <text x="135" y="148" text-anchor="middle" font-size="16" font-weight="600" fill="#1f2937">文档</text>
+    <text x="135" y="169" text-anchor="middle" font-size="12" fill="#64748b">PDF · 网页 · DB · 工单</text>
+  </g>
+  <g>
+    <rect x="260" y="116" width="170" height="68" rx="10" fill="#ffffff" stroke="#7ea6f5"/>
+    <text x="345" y="148" text-anchor="middle" font-size="16" font-weight="600" fill="#1f2937">切分 Chunking</text>
+    <text x="345" y="169" text-anchor="middle" font-size="12" fill="#64748b">块大小 + 重叠 overlap</text>
+  </g>
+  <g>
+    <rect x="470" y="116" width="170" height="68" rx="10" fill="#ffffff" stroke="#7ea6f5"/>
+    <text x="555" y="148" text-anchor="middle" font-size="16" font-weight="600" fill="#1f2937">向量化 Embedding</text>
+    <text x="555" y="169" text-anchor="middle" font-size="12" fill="#64748b">嵌入模型 → 高维向量</text>
+  </g>
+  <g>
+    <rect x="680" y="116" width="170" height="68" rx="10" fill="#ffffff" stroke="#7ea6f5"/>
+    <text x="765" y="148" text-anchor="middle" font-size="16" font-weight="600" fill="#1f2937">向量数据库</text>
+    <text x="765" y="169" text-anchor="middle" font-size="12" fill="#64748b">向量 + 原文 + 元数据</text>
+  </g>
+
+  <line x1="222" y1="150" x2="256" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="432" y1="150" x2="466" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="642" y1="150" x2="676" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- ===== ② 在线检索 + 生成 ===== -->
+  <rect x="20" y="280" width="920" height="200" rx="14" fill="#f6fdf9" stroke="#d5f0e0"/>
+  <text x="42" y="312" font-size="15" font-weight="700" fill="#16a34a">② 在线 · 检索 + 生成 Retrieval &amp; Generation</text>
+
+  <g>
+    <rect x="28" y="340" width="124" height="70" rx="10" fill="#ffffff" stroke="#7fd1a3"/>
+    <text x="90" y="373" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2937">用户问题</text>
+    <text x="90" y="394" text-anchor="middle" font-size="11" fill="#64748b">自然语言提问</text>
+  </g>
+  <g>
+    <rect x="184" y="340" width="124" height="70" rx="10" fill="#ffffff" stroke="#7fd1a3"/>
+    <text x="246" y="373" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2937">向量化</text>
+    <text x="246" y="394" text-anchor="middle" font-size="11" fill="#64748b">同一嵌入模型</text>
+  </g>
+  <g>
+    <rect x="340" y="340" width="124" height="70" rx="10" fill="#ffffff" stroke="#7fd1a3"/>
+    <text x="402" y="373" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2937">相似度检索</text>
+    <text x="402" y="394" text-anchor="middle" font-size="11" fill="#64748b">Top-K 召回</text>
+  </g>
+  <g>
+    <rect x="496" y="340" width="124" height="70" rx="10" fill="#ffffff" stroke="#7fd1a3"/>
+    <text x="558" y="373" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2937">重排 Rerank</text>
+    <text x="558" y="394" text-anchor="middle" font-size="11" fill="#64748b">Cross-encoder 精排</text>
+  </g>
+  <g>
+    <rect x="652" y="340" width="124" height="70" rx="10" fill="#ffffff" stroke="#7fd1a3"/>
+    <text x="714" y="373" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2937">生成 LLM</text>
+    <text x="714" y="394" text-anchor="middle" font-size="11" fill="#64748b">依据资料作答</text>
+  </g>
+  <g>
+    <rect x="808" y="340" width="124" height="70" rx="10" fill="#ffffff" stroke="#7fd1a3"/>
+    <text x="870" y="373" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2937">答案</text>
+    <text x="870" y="394" text-anchor="middle" font-size="11" fill="#64748b">附引用来源</text>
+  </g>
+
+  <line x1="154" y1="375" x2="180" y2="375" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="310" y1="375" x2="336" y2="375" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="466" y1="375" x2="492" y2="375" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="622" y1="375" x2="648" y2="375" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="778" y1="375" x2="804" y2="375" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 检索时从向量库取数 -->
+  <path d="M765 184 L765 250 L402 250 L402 336" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ard)"/>
+  <text x="583" y="242" text-anchor="middle" font-size="11" fill="#b45309">检索时向向量库查询</text>
+
+  <text x="42" y="452" font-size="12.5" fill="#475569">拼装 Prompt：系统指令 + 检索到的资料 + 用户问题 —— 要求「只依据资料作答」并标注引用。</text>
+</svg>
