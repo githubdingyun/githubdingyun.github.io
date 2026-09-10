@@ -20,7 +20,6 @@ const PRECACHE_LIST = [
   "./js/hux-blog.min.js",
   "./js/snackbar.js",
   "./img/icon_wechat.png",
-  "./img/avatar-hux.jpg",
   "./img/home-bg.jpg",
   "./img/404-bg.jpg",
   "./css/hux-blog.min.css",
@@ -103,8 +102,8 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE).then(cache => {
       return cache.addAll(PRECACHE_LIST)
-        .then(self.skipWaiting())
-        .catch(err => console.log(err))
+        .then(() => self.skipWaiting())
+        .catch(err => console.error('[sw] precache failed:', err))
     })
   )
 });

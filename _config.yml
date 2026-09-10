@@ -1,27 +1,27 @@
 # Site settings
-title: DingYun's Blog
-SEOTitle: DingYun Blog | 李帅国的博客
+title: Lsg's Blog
+SEOTitle: Lsg's Blog | 定陨 的博客
 header-img: img/home-bg.jpg
-email: u5708190@gmail.com
 description: "Java,python,scala Coder and Big Data Engineer | 这里是 @DingYun ShuaiguoLi 的个人博客， 生活需要仪式感，💪。"
-keyword: "ShuaiguoLi,LiShuaiguo,DingYun,dingyun,定陨李帅国的博客,@DingYun,spider, @DingYun的博客, 博客, 个人网站, 互联网"
+keyword: "ShuaiguoLi,LiShuaiguo,DingYun,dingyun,定陨的博客,@DingYun,spider, @DingYun的博客, 博客, 个人网站, 互联网"
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
-url: "https://guthubdingyun.github.io/"              # your host, for absolute URL
+url: "https://githubdingyun.github.io/"              # your host, for absolute URL
 
 # Publish posts or collection documents with a future date.
 
 future: true
 # SNS settings
-RSS: true
-weibo_username:     定陨
-zhihu_username:     dingyun
-github_username:    githubdingyun
-zhihu_username: dingyun
-linkedin_username:  定陨
-twitter_username:   定陨
-facebook_username:  dingyun
+# 已按隐私要求关闭整排社交图标（页脚 + 侧栏）。如需恢复：
+#   1) 取消下面各项注释；2) 取消 _includes/footer.html 与 _includes/short-about.html 中 sns-links 的注释
+# RSS: true
+# weibo_username:     定陨
+# zhihu_username:     dingyun
+# github_username:    githubdingyun
+# linkedin_username:  定陨
+# twitter_username:   定陨
+# facebook_username:  dingyun
 
-description_footer: 来自李帅国的个人专栏！
+description_footer: 来自定陨的个人专栏！
 
 
 
@@ -83,14 +83,16 @@ gitalk:
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+# 已停用模板原作者 Hux 的属性 ID（UA-49627206-1），避免把本站访问计入他人账号。
+# 填入你自己的属性 ID 后取消下一行注释即可恢复统计。
+# ga_track_id: 'UA-XXXXXXXX-X'          # Format: UA-xxxxxx-xx
 ga_domain: auto
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
+sidebar-about-description: "Java 后端开发工程师 · 6 年经验<br>水利水电信息化 · AI 知识库 / 情报系统"
 sidebar-avatar: /img/小埋0.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

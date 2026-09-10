@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ari" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="520" fill="#ffffff"/>
+
+  <rect x="20" y="24" width="920" height="380" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="44" y="58" font-size="15" font-weight="700" fill="#4f46e5">Agent = LLM + 规划 Planning + 记忆 Memory + 工具 Tools</text>
+
+  <!-- Planning -->
+  <rect x="370" y="76" width="220" height="84" rx="12" fill="#ffffff" stroke="#8b8bf0"/>
+  <text x="480" y="108" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2937">Planning 规划</text>
+  <text x="480" y="130" text-anchor="middle" font-size="11.5" fill="#64748b">拆解目标 · 决定下一步</text>
+
+  <!-- Memory -->
+  <rect x="70" y="190" width="230" height="110" rx="12" fill="#ffffff" stroke="#8b8bf0"/>
+  <text x="185" y="232" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2937">Memory 记忆</text>
+  <text x="185" y="256" text-anchor="middle" font-size="11.5" fill="#64748b">短期：当前上下文</text>
+  <text x="185" y="278" text-anchor="middle" font-size="11.5" fill="#64748b">长期：外部知识库</text>
+
+  <!-- LLM 大脑 -->
+  <rect x="370" y="190" width="220" height="110" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="480" y="232" text-anchor="middle" font-size="17" font-weight="700" fill="#3730a3">LLM 大脑</text>
+  <text x="480" y="256" text-anchor="middle" font-size="11.5" fill="#4f46e5">推理 · 决策 · 表达</text>
+  <text x="480" y="278" text-anchor="middle" font-size="11.5" fill="#4f46e5">唯一的决策者</text>
+
+  <!-- Tools -->
+  <rect x="660" y="190" width="230" height="110" rx="12" fill="#ffffff" stroke="#8b8bf0"/>
+  <text x="775" y="232" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2937">Tools 工具</text>
+  <text x="775" y="256" text-anchor="middle" font-size="11.5" fill="#64748b">搜索 · 数据库 · 代码</text>
+  <text x="775" y="278" text-anchor="middle" font-size="11.5" fill="#64748b">API · RAG 检索 …</text>
+
+  <line x1="480" y1="186" x2="480" y2="164" stroke="#6366f1" stroke-width="2" marker-start="url(#ari)" marker-end="url(#ari)"/>
+  <line x1="366" y1="245" x2="304" y2="245" stroke="#6366f1" stroke-width="2" marker-start="url(#ari)" marker-end="url(#ari)"/>
+  <line x1="594" y1="245" x2="656" y2="245" stroke="#6366f1" stroke-width="2" marker-start="url(#ari)" marker-end="url(#ari)"/>
+
+  <text x="480" y="350" text-anchor="middle" font-size="12.5" fill="#475569">流程由模型动态决定：调哪个工具、调几次、何时停——都是 LLM 现场判断。</text>
+  <text x="480" y="376" text-anchor="middle" font-size="12.5" fill="#475569">RAG 只是它的工具之一；缺了工具，再强的推理也落不了地。</text>
+
+  <text x="44" y="452" font-size="12.5" fill="#475569">四件套缺一不可：LLM 负责想，Planning 负责拆，Memory 负责记，Tools 负责做。</text>
+</svg>
