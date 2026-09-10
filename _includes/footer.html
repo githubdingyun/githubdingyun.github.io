@@ -3,8 +3,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <!-- SNS Link -->
-                {% include sns-links.html center=true %}
+                <!-- SNS Link：已按隐私要求关闭整排社交图标；恢复：取消下面注释 + _config.yml 的 SNS settings 注释 -->
+                {% comment %}{% include sns-links.html center=true %}{% endcomment %}
 
                 <p class="copyright text-muted">
                   Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}

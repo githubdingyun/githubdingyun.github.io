@@ -2,7 +2,6 @@
 title: Lsg's Blog
 SEOTitle: Lsg's Blog | 定陨 的博客
 header-img: img/home-bg.jpg
-email: u5708190@gmail.com
 description: "Java,python,scala Coder and Big Data Engineer | 这里是 @DingYun ShuaiguoLi 的个人博客， 生活需要仪式感，💪。"
 keyword: "ShuaiguoLi,LiShuaiguo,DingYun,dingyun,定陨的博客,@DingYun,spider, @DingYun的博客, 博客, 个人网站, 互联网"
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -12,14 +11,15 @@ url: "https://githubdingyun.github.io/"              # your host, for absolute U
 
 future: true
 # SNS settings
-RSS: true
-weibo_username:     定陨
-zhihu_username:     dingyun
-github_username:    githubdingyun
-zhihu_username: dingyun
-linkedin_username:  定陨
-twitter_username:   定陨
-facebook_username:  dingyun
+# 已按隐私要求关闭整排社交图标（页脚 + 侧栏）。如需恢复：
+#   1) 取消下面各项注释；2) 取消 _includes/footer.html 与 _includes/short-about.html 中 sns-links 的注释
+# RSS: true
+# weibo_username:     定陨
+# zhihu_username:     dingyun
+# github_username:    githubdingyun
+# linkedin_username:  定陨
+# twitter_username:   定陨
+# facebook_username:  dingyun
 
 description_footer: 来自定陨的个人专栏！
 
