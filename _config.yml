@@ -92,7 +92,7 @@ ga_domain: auto
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
+sidebar-about-description: "Java 后端开发工程师 · 6 年经验<br>水利水电信息化 · AI 知识库 / 情报系统"
 sidebar-avatar: /img/小埋0.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
