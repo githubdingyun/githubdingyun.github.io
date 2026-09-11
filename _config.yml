@@ -30,7 +30,19 @@ description_footer: 来自定陨的个人专栏！
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+# 注意：一旦自定义 exclude，Jekyll 的默认排除项会被覆盖，所以必须自己列全。
+# CLAUDE.md / package-lock.json / book.postgres.backup 都没有 front matter，
+# 不排除的话会被原样拷进 _site/，在站点根目录可以直接下载。
+exclude:
+  - less
+  - node_modules
+  - Gruntfile.js
+  - package.json
+  - package-lock.json
+  - README.md
+  - README.zh.md
+  - CLAUDE.md
+  - book.postgres.backup
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 timezone: CN
