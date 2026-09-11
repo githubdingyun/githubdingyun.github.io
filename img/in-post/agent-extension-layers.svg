@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="ari" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="520" fill="#ffffff"/>
+  <text x="20" y="28" font-size="16" font-weight="700" fill="#1f2937">五种扩展机制挂在哪一层</text>
+
+  <!-- ===== 协议层 ===== -->
+  <rect x="20" y="44" width="920" height="104" rx="12" fill="#f5f8ff" stroke="#dbe6ff"/>
+  <text x="40" y="68" font-size="13.5" font-weight="700" fill="#2563eb">协议层 · 跨厂商开放标准</text>
+
+  <rect x="44" y="80" width="196" height="56" rx="10" fill="#ffffff" stroke="#7ea6f5"/>
+  <text x="142" y="104" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2937">MCP</text>
+  <text x="142" y="124" text-anchor="middle" font-size="11" fill="#64748b">把外部工具标准化</text>
+
+  <line x1="244" y1="108" x2="284" y2="108" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="288" y="80" width="250" height="56" rx="10" fill="#ffffff" stroke="#7ea6f5"/>
+  <text x="413" y="104" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2937">外部工具 / 数据源</text>
+  <text x="413" y="124" text-anchor="middle" font-size="11" fill="#64748b">数据库 · API · SaaS</text>
+
+  <text x="562" y="102" font-size="12" fill="#475569">模型主动决定调不调</text>
+  <text x="562" y="122" font-size="12" fill="#475569">换客户端大概率还能用</text>
+
+  <!-- ===== 机制层 ===== -->
+  <rect x="20" y="160" width="920" height="212" rx="12" fill="#f8f9ff" stroke="#e2e4f8"/>
+  <text x="40" y="184" font-size="13.5" font-weight="700" fill="#4f46e5">机制层 · 具体产品的扩展机制（以 Claude Code 为例）</text>
+
+  <rect x="40" y="198" width="560" height="154" rx="12" fill="#ffffff" stroke="#8b8bf0" stroke-dasharray="6 5"/>
+  <text x="58" y="220" font-size="13" font-weight="600" fill="#4f46e5">插件 · 打包分发</text>
+  <text x="58" y="237" font-size="11" fill="#64748b">把一个可分发单元装起来</text>
+
+  <rect x="56" y="250" width="256" height="88" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="184" y="278" text-anchor="middle" font-size="15" font-weight="600" fill="#3730a3">Hooks</text>
+  <text x="184" y="300" text-anchor="middle" font-size="11.5" fill="#4f46e5">挂在生命周期事件上</text>
+  <text x="184" y="320" text-anchor="middle" font-size="11.5" fill="#4f46e5">确定性：不由模型决定</text>
+
+  <rect x="328" y="250" width="256" height="88" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="456" y="278" text-anchor="middle" font-size="15" font-weight="600" fill="#3730a3">Skills</text>
+  <text x="456" y="300" text-anchor="middle" font-size="11.5" fill="#4f46e5">按需触发的能力包</text>
+  <text x="456" y="320" text-anchor="middle" font-size="11.5" fill="#4f46e5">平时只加载 name + description</text>
+
+  <rect x="640" y="222" width="280" height="118" rx="12" fill="#ffffff" stroke="#8b8bf0"/>
+  <text x="780" y="254" text-anchor="middle" font-size="16" font-weight="600" fill="#1f2937">Agent 循环</text>
+  <text x="780" y="278" text-anchor="middle" font-size="11.5" fill="#64748b">模型思考 → 调工具 → 看结果</text>
+  <text x="780" y="300" text-anchor="middle" font-size="11.5" fill="#64748b">反复循环，直到可以收工</text>
+  <text x="780" y="322" text-anchor="middle" font-size="11.5" fill="#64748b">（Hooks 挂在这条链的节点上）</text>
+
+  <line x1="604" y1="275" x2="636" y2="275" stroke="#6366f1" stroke-width="2" marker-end="url(#ari)"/>
+
+  <!-- ===== 代码层 ===== -->
+  <rect x="20" y="384" width="920" height="88" rx="12" fill="#f6fdf9" stroke="#d5f0e0"/>
+  <text x="40" y="408" font-size="13.5" font-weight="700" fill="#16a34a">代码层 · 把 Agent 循环开放成库</text>
+
+  <rect x="44" y="418" width="230" height="44" rx="10" fill="#ffffff" stroke="#7fd1a3"/>
+  <text x="159" y="445" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2937">Agent SDK</text>
+
+  <line x1="278" y1="440" x2="316" y2="440" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="320" y="418" width="292" height="44" rx="10" fill="#ffffff" stroke="#7fd1a3"/>
+  <text x="466" y="445" text-anchor="middle" font-size="13.5" fill="#1f2937">你自己的程序 / 产品</text>
+
+  <text x="640" y="437" font-size="12" fill="#475569">不是「扩展别人的」，</text>
+  <text x="640" y="455" font-size="12" fill="#475569">而是「自己造一个」</text>
+
+  <text x="20" y="502" font-size="12.5" fill="#475569">MCP 是开放协议，另外四个是具体产品的机制；插件是前面几样的打包盒。</text>
+</svg>

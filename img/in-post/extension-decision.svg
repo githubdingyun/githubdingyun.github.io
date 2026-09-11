@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="520" fill="#ffffff"/>
+  <text x="20" y="30" font-size="16" font-weight="700" fill="#1f2937">怎么选：先问「我要解决什么」，再对应到机制</text>
+
+  <text x="40" y="56" font-size="11.5" font-weight="600" fill="#64748b">你的诉求</text>
+  <text x="588" y="56" font-size="11.5" font-weight="600" fill="#64748b">对应的机制</text>
+
+  <!-- 行 1：MCP -->
+  <rect x="40" y="66" width="456" height="62" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="58" y="102" font-size="13.5" fill="#1f2937">要接外部系统 / 数据源（DB、API、SaaS）</text>
+  <line x1="500" y1="97" x2="580" y2="97" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="588" y="66" width="332" height="62" rx="10" fill="#f5f8ff" stroke="#7ea6f5"/>
+  <text x="606" y="92" font-size="15" font-weight="600" fill="#2563eb">MCP</text>
+  <text x="904" y="92" text-anchor="end" font-size="11" fill="#60a5fa">协议层</text>
+  <text x="606" y="112" font-size="11.5" fill="#475569">开放协议，把外部工具标准化</text>
+
+  <!-- 行 2：Hooks -->
+  <rect x="40" y="142" width="456" height="62" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="58" y="178" font-size="13.5" fill="#1f2937">要加硬规矩：某类操作先拦住，别等它跑</text>
+  <line x1="500" y1="173" x2="580" y2="173" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="588" y="142" width="332" height="62" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="606" y="168" font-size="15" font-weight="600" fill="#3730a3">Hooks</text>
+  <text x="904" y="168" text-anchor="end" font-size="11" fill="#818cf8">机制层</text>
+  <text x="606" y="188" font-size="11.5" fill="#475569">挂在生命周期事件上的确定性门禁</text>
+
+  <!-- 行 3：Skills -->
+  <rect x="40" y="218" width="456" height="62" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="58" y="254" font-size="13.5" fill="#1f2937">要让 AI 按某套成体系的方法干活</text>
+  <line x1="500" y1="249" x2="580" y2="249" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="588" y="218" width="332" height="62" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="606" y="244" font-size="15" font-weight="600" fill="#3730a3">Skills</text>
+  <text x="904" y="244" text-anchor="end" font-size="11" fill="#818cf8">机制层</text>
+  <text x="606" y="264" font-size="11.5" fill="#475569">按需加载的能力包 / 方法包</text>
+
+  <!-- 行 4：插件 -->
+  <rect x="40" y="294" width="456" height="62" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="58" y="330" font-size="13.5" fill="#1f2937">要把同一套配置分发给团队 / 多个项目</text>
+  <line x1="500" y1="325" x2="580" y2="325" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="588" y="294" width="332" height="62" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="606" y="320" font-size="15" font-weight="600" fill="#3730a3">插件</text>
+  <text x="904" y="320" text-anchor="end" font-size="11" fill="#818cf8">机制层</text>
+  <text x="606" y="340" font-size="11.5" fill="#475569">打包 + 分发 + 版本管理</text>
+
+  <!-- 行 5：SDK -->
+  <rect x="40" y="370" width="456" height="62" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="58" y="406" font-size="13.5" fill="#1f2937">要把 Agent 循环嵌进自己的程序 / 产品</text>
+  <line x1="500" y1="401" x2="580" y2="401" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="588" y="370" width="332" height="62" rx="10" fill="#f6fdf9" stroke="#7fd1a3"/>
+  <text x="606" y="396" font-size="15" font-weight="600" fill="#16a34a">SDK</text>
+  <text x="904" y="396" text-anchor="end" font-size="11" fill="#4ade80">代码层</text>
+  <text x="606" y="416" font-size="11.5" fill="#475569">用代码自己造一个 Harness</text>
+
+  <text x="20" y="468" font-size="12.5" fill="#475569">五个机制不互斥：同一个项目里可以既接 MCP 又挂 Hooks，插件则用来把前几样打包分发出去。</text>
+  <text x="20" y="492" font-size="12.5" fill="#475569">判断顺序建议：先问「是不是要接外部系统」，再问「是不是要加硬约束」，最后才问「怎么分发 / 要不要自造」。</text>
+</svg>
