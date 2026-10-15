@@ -1,36 +1,18 @@
-***
-
+---
 layout:     post
-
 title:      "Windows 服务器本地部署大模型全攻略（A6000 48GB 自用）"
-
 subtitle:   "常用模型调研 × 部署方式对比 × 从零部署步骤"
-
 date:       2026-10-15
-
 author:     "LSG"
-
 header-img: "img/home-bg.jpg"
-
 catalog: true
-
 tags:
-
-
-
-* Ollama
-
-* LLM
-
-* Windows
-
-* 本地部署
-
-* A6000
-
-
-
-***
+  - Ollama
+  - LLM
+  - Windows
+  - 本地部署
+  - A6000
+---
 
 > 一台配了 RTX A6000（48GB 显存）+ 64GB 内存的 Windows 服务器，想自己跑大模型、写代码、不依赖公网 API。本文分三部分：常用模型调研、部署方式对比、从零部署步骤。
 
