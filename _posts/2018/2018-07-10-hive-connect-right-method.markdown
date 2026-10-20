@@ -154,9 +154,7 @@ beeline \
 1. 导入hadoop对应版本的hive jar包:可以在hivelib下面找
 2. 建立驱动和别名
 3. 链接客户端
-4. 放一张我链接成功的图QAQ:
-
-![hdfs-img](/image/squirrel.png)
+4. 连接成功后即可在 Squirrel 里写 SQL 并保留历史记录。
 
 #### 4.3 使用idea客户端
 

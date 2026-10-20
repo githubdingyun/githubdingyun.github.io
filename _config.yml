@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 description: "Java,python,scala Coder and Big Data Engineer | 这里是 @DingYun ShuaiguoLi 的个人博客， 生活需要仪式感，💪。"
 keyword: "ShuaiguoLi,LiShuaiguo,DingYun,dingyun,定陨的博客,@DingYun,spider, @DingYun的博客, 博客, 个人网站, 互联网"
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
-url: "https://githubdingyun.github.io/"              # your host, for absolute URL
+url: "https://githubdingyun.github.io"               # 不要以 / 结尾：模板会再拼 page.url（以 / 开头），否则出现 //
 
 # Publish posts or collection documents with a future date.
 
@@ -80,12 +80,19 @@ kramdown:
 # Netease settings
 netease_comment: false
 
+# Gitalk 评论：已停用并移除凭据。
+# 原因：Gitalk 的 clientSecret 必须下发到浏览器，写在公开仓库里等于公开；
+# 原 clientSecret 已泄露，请到 GitHub → Settings → Developer settings →
+# OAuth Apps 删除/重置该 App。
+# 如需恢复评论，建议改用无需 secret 的方案（giscus / utterances，基于 GitHub
+# Discussions/Issues），或新建仅含 public_repo 权限的专用 OAuth App 后，
+# 在此填入新的 clientID / clientSecret 并把 enable 改回 true。
 gitalk:
-   enable: true
+   enable: false
    owner: githubdingyun
    repo: githubdingyun.github.io
-   clientID: b67862f36106b7021235
-   clientSecret: d7cb495b8cf33ea44d3259936b13af1b06ad0902
+   # clientID: <your-client-id>
+   # clientSecret: <your-client-secret>
    admin: githubdingyun
 
 

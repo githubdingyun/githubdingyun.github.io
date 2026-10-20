@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Apache Commons CLI 使用说明 "
-subtitle:   "信息、载体、抽象、线程 设计乱谈"
+subtitle:   "Java 命令行参数解析的入门与实战"
 date:       2019-10-15
 author:     "LSG"
 header-img: "img/home-bg-o.jpg"

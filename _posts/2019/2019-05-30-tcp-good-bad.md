@@ -2,7 +2,7 @@
 layout:     post
 title:      "TCP的罪与罚"
 subtitle:   "3次握手,4次分手,什么是多路复用,通信以什么行式存在"
-date:       2018-02-01
+date:       2019-05-30
 author:     "LSG"
 header-img: "img/tcp.png"
 catalog: true

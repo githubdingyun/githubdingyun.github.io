@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "spark调优总结 "
-subtitle:   "信息、载体、抽象、线程 设计乱谈"
+subtitle:   "资源配置、序列化与 Shuffle 的调优经验"
 date:       2019-11-21
 author:     "LSG"
 header-img: "img/post-bg-os-metro.jpg"

@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "如何正确的使用java线程池 "
-subtitle:   "信息、载体、抽象、线程 设计乱谈"
+subtitle:   "四种线程池工厂、参数配置与使用注意事项"
 date:       2019-08-21
 author:     "LSG"
 header-img: "img/post-bg-miui6.jpg"

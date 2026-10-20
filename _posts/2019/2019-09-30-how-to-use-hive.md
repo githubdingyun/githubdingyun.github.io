@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "数据仓库hive的使用总结 "
-subtitle:   "信息、载体、抽象、线程 设计乱谈"
+subtitle:   "维度建模、常用 SQL 与 Hive 使用实践"
 date:       2019-09-30
 author:     "LSG"
 header-img: "img/post-bg-infinity.jpg"
